@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Reverse an Array",
+    "description": "Write a function that takes an array and reverses it in-place.\nExample: [1, 2, 3] → [3, 2, 1]",
+    "explanation": "Use two-pointer technique: swap elements from start and end."
+  },
+  {
+    "title": "Maximum Subarray Sum",
+    "description": "Given an integer array, find the contiguous subarray with the largest sum.",
+    "explanation": "Use Kadane’s Algorithm: track max‑ending‑here and max‑so‑far."
+  }
+]
