@@ -11,10 +11,24 @@ public class User {
         this.totalTimeSpent = 0;
     }
 
+    public User(String name, int totalProblemsSolved, long totalTimeSpent) {
+        this.name = name;
+        this.totalProblemsSolved = totalProblemsSolved;
+        this.totalTimeSpent = totalTimeSpent;
+    }
+
     // Getters and setters
-    public String getName() { return name; }
-    public int getTotalProblemsSolved() { return totalProblemsSolved; }
-    public long getTotalTimeSpent() { return totalTimeSpent; }
+    public String getName() {
+        return name;
+    }
+
+    public int getTotalProblemsSolved() {
+        return totalProblemsSolved;
+    }
+
+    public long getTotalTimeSpent() {
+        return totalTimeSpent;
+    }
 
     public void addSolvedProblem(long timeTaken) {
         totalProblemsSolved++;

@@ -24,10 +24,13 @@ public class IOUtils {
 
     public static List<Problem> loadProblems(String filename) {
         try (FileReader reader = new FileReader(filename)) {
-            return gson.fromJson(reader, new TypeToken<List<Problem>>() {}.getType());
+            List<Problem> problems = gson.fromJson(reader, new TypeToken<List<Problem>>() {
+            }.getType());
+            return problems != null ? problems : new java.util.ArrayList<>();
         } catch (IOException e) {
-            System.out.println("Error loading problems: " + e.getMessage());
-            return null;
+            System.out
+                    .println("⚠️ Warning: Could not load " + filename + " (File not found or empty). Starting fresh.");
+            return new java.util.ArrayList<>();
         }
     }
 }

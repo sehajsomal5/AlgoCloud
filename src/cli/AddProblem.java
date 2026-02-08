@@ -1,7 +1,7 @@
 package cli;
 
 import storage.ProblemStorage;
-import utils.ScannerUtil;
+import util.ScannerUtil;
 
 import java.util.Scanner;
 

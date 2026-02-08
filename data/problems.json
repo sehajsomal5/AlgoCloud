@@ -1,12 +1,27 @@
 [
   {
     "title": "Reverse an Array",
-    "description": "Write a function that takes an array and reverses it in-place.\nExample: [1, 2, 3] → [3, 2, 1]",
+    "description": "Write a function that takes an array and reverses it in-place.\nExample: [1, 2, 3] -> [3, 2, 1]",
     "explanation": "Use two-pointer technique: swap elements from start and end."
   },
   {
     "title": "Maximum Subarray Sum",
     "description": "Given an integer array, find the contiguous subarray with the largest sum.",
-    "explanation": "Use Kadane’s Algorithm: track max‑ending‑here and max‑so‑far."
+    "explanation": "Use Kadane's Algorithm: track max-ending-here and max-so-far."
+  },
+  {
+    "title": "Two Sum",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+    "explanation": "Use a Hash Map to store the difference (target - element) as you iterate."
+  },
+  {
+    "title": "Valid Parentheses",
+    "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+    "explanation": "Use a Stack to push opening brackets and pop matching closing brackets."
+  },
+  {
+    "title": "Binary Search",
+    "description": "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return -1.",
+    "explanation": "Use divide and conquer. Check mid element, if greater go left, if smaller go right."
   }
 ]
