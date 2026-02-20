@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoCloud | Interactive DSA Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav>
+        <div class="logo">Algo<span>Cloud</span></div>
+        <div class="nav-links">
+            <a href="#" class="nav-btn active" data-target="dashboard">Dashboard</a>
+            <a href="#" class="nav-btn" data-target="visualizer">Visualizer</a>
+            <a href="#" class="nav-btn" data-target="profile">Profile</a>
+        </div>
+    </nav>
+
+    <main id="dashboard" class="page active">
+        <header>
+            <h1>Welcome back, <span id="user-welcome">Explorer</span></h1>
+            <p>Ready to solve some algorithms today?</p>
+        </header>
+
+        <section class="problem-container">
+            <div class="section-header">
+                <h2>📋 System Problems</h2>
+                <span class="badge" id="system-count">0</span>
+            </div>
+            <div class="problem-grid" id="system-problems">
+                <div class="loader"></div>
+            </div>
+        </section>
+
+        <section class="problem-container">
+            <div class="section-header">
+                <h2>📜 Custom Problems</h2>
+                <span class="badge" id="custom-count">0</span>
+            </div>
+            <div class="problem-grid" id="custom-problems"></div>
+        </section>
+    </main>
+
+    <main id="visualizer" class="page">
+        <header>
+            <h1>Algorithm <span>Visualizer</span></h1>
+            <p>See how algorithms work step-by-step with real-time logic tracking.</p>
+        </header>
+
+        <div class="vid-controls">
+            <select id="algo-select">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+            </select>
+            <button id="start-btn">Start Visualization</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+        <div class="visualizer-grid">
+            <div class="visualizer-main-area">
+                <div class="visualizer-container">
+                    <div id="indicators-container"
+                        style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></div>
+                    <div id="array-container"></div>
+                    <div id="floating-explanation" class="floating-explanation"></div>
+                </div>
+
+                <div class="feedback-container">
+                    <div class="status-box" style="width: 100%;">
+                        <p id="visualizer-status">Choose an algorithm and click Start!</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="code-panel">
+                <div class="panel-header">
+                    <h3>💻 Algorithm Logic</h3>
+                </div>
+                <div id="code-display" class="code-display">
+                    <p class="empty-code">Select an algorithm to see the code...</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <main id="profile" class="page">
+        <header>
+            <h1>User <span>Profile</span></h1>
+            <p>Track your progress and achievements.</p>
+        </header>
+
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="avatar">👤</div>
+                <h2 id="profile-name">Loading...</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Problems Solved</span>
+                    <span class="stat-value" id="profile-solved">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Time Spent</span>
+                    <span class="stat-value" id="profile-time">0ms</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Current Level</span>
+                    <span class="stat-value">Beginner</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="problem-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
